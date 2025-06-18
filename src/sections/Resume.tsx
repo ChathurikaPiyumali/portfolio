@@ -79,6 +79,7 @@ const Resume: React.FC = () => {
 
   return (
     <TabContent>
+       <div className="px-4 md:px-8">
       {/* Education */}
       <motion.div 
         className="mb-10"
@@ -200,6 +201,7 @@ const Resume: React.FC = () => {
           </motion.div>
         </div>
       </motion.div>
+      </div>
     </TabContent>
   );
 };

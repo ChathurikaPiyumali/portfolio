@@ -176,48 +176,66 @@ export const projects: ProjectProps[] = [
 
 
 export const certificates: CertificateProps[] = [
-  {
+    {
     id: 'cert1',
-    title: 'Python for Data Science',
-    issuer: 'IBM / Coursera',
-    date: 'May 2023',
-    image: 'https://images.pexels.com/photos/6238297/pexels-photo-6238297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    title: 'AI/ML Engineer - Stage 1',
+    issuer: 'SLIIT Uni',
+    date: 'November 2024',
+    image: '/certificatess/AIML1.png'
   },
-  {
+
+      {
     id: 'cert2',
-    title: 'Machine Learning',
-    issuer: 'Coursera',
-    date: 'August 2023',
-    image: 'https://images.pexels.com/photos/7792804/pexels-photo-7792804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    title: 'AI/ML Engineer - Stage 2',
+    issuer: 'SLIIT Uni',
+    date: 'December 2024',
+    image: '/certificatess/AIML2.png'
   },
-  {
+
+        {
     id: 'cert3',
-    title: 'Frontend Development',
-    issuer: 'DevTown',
-    date: 'November 2022',
-    image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    title: 'Getting Started with Git and GitHub',
+    issuer: 'IBM / Coursera',
+    date: 'March 2025',
+    image: 'certificatess/IBM_Git.png'
   },
-  {
+
+        {
     id: 'cert4',
-    title: 'Diploma in IT',
-    issuer: 'ESOFT',
-    date: 'December 2023',
-    image: 'https://images.pexels.com/photos/5905709/pexels-photo-5905709.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    title: 'Machine Learning Introduction for Everyone',
+    issuer: 'IBM / Coursera',
+    date: 'December 2024',
+    image: 'certificatess/IBM_ML.png'
   },
-  {
+
+
+        {
     id: 'cert5',
-    title: 'Web Design',
-    issuer: 'UoM',
-    date: 'March 2023',
-    image: 'https://images.pexels.com/photos/326424/pexels-photo-326424.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    title: 'Python for Data Science.AI & Development',
+    issuer: 'IBM / Coursera',
+    date: 'March 2025',
+    image: 'certificatess/IBM_Python.png'
   },
-  {
+
+        {
     id: 'cert6',
-    title: 'Python with NumPy',
-    issuer: 'Eduonix',
-    date: 'January 2023',
-    image: 'https://images.pexels.com/photos/4164418/pexels-photo-4164418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+    title: 'Learning Data Science:Understanding the Basics',
+    issuer: 'LinkedIn Learning',
+    date: 'December 2024',
+    image: 'certificatess/Linkedin_DS.png'
   },
+
+          {
+    id: 'cert7',
+    title: 'Python for Beginners',
+    issuer: 'University of Moratuwa - FOE',
+    date: 'March 2025',
+    image: 'certificatess/UoM_Python.png'
+  },
+
+
+ 
+  
 ];
 
 export const projectCategories = [
