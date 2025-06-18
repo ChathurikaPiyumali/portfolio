@@ -17,6 +17,7 @@ export interface ProjectProps {
   technologies: string[];
   description: string;
   github?: string;
+  figma?: string;
 }
 
 export interface CertificateProps {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FiExternalLink } from 'react-icons/fi';
+import { SiFigma } from 'react-icons/si';
 import { motion } from 'framer-motion';
 
 interface ProjectProps {
@@ -12,6 +13,7 @@ interface ProjectProps {
   description: string;
   github?: string;
   demo?: string;
+  figma?: string;
 }
 
 const ProjectCard: React.FC<ProjectProps> = ({
@@ -21,6 +23,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
   technologies,
   github,
   demo,
+  figma,
 }) => {
   return (
     <motion.div
@@ -47,7 +50,7 @@ const ProjectCard: React.FC<ProjectProps> = ({
         ))}
       </div>
 
-      {/* Buttons at bottom-right */}
+      {/* Buttons bottom right */}
       <div className="absolute bottom-4 right-4 flex gap-2">
         {github && (
           <a
@@ -60,6 +63,19 @@ const ProjectCard: React.FC<ProjectProps> = ({
             GitHub
           </a>
         )}
+
+        {figma && (
+          <a
+            href={figma}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-1 px-4 py-2 text-sm font-medium bg-gray-900 text-white rounded-full hover:bg-yellow-400 hover:text-black transition-all"
+          >
+            <SiFigma size={16} />
+            Figma
+          </a>
+        )}
+
         {demo && (
           <a
             href={demo}

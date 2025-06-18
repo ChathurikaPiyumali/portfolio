@@ -19,7 +19,7 @@ const socialLinks: SocialLinkProps[] = [
   { url: 'https://github.com/chathurika',      icon: <Github    size={18} />, label: 'GitHub'    },
   { url: 'https://www.instagram.com/piyu_c.u/', icon: <Instagram size={18} />, label: 'Instagram' },
   { url: 'https://www.facebook.com/chathurika.piyumali.151755', icon: <Facebook size={18} />, label: 'Facebook' },
-  { url: 'mailto:chathurikipyumali01@gmail.com', icon: <Mail size={18} />,     label: 'Email'     },
+  { url: 'mailto:chathurikapiyumali01@gmail.com', icon: <Mail size={18} />,     label: 'Email'     },
 ];
 
 // Terms for the typewriter
@@ -136,8 +136,8 @@ const Sidebar: React.FC = () => {
             </div>
             <div className="flex items-center">
               <Mail size={16} className="text-accent-gold mr-3" />
-              <a href="mailto:chathurikipyumali01@gmail.com" className="break-all hover:underline">
-                chathurikipyumali01@gmail.com
+              <a href="mailto:chathurikapiyumali01@gmail.com" className="break-all hover:underline">
+                chathurikapiyumali01@gmail.com
               </a>
             </div>
             <div className="flex items-center">

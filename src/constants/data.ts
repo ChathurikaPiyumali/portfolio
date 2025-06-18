@@ -76,7 +76,7 @@ export const projects: ProjectProps[] = [
     category: 'Web Development',
     image: '/portfolio.png',
     technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Framer Motion' , '.....'],
-    github: 'https://github.com/ChathurikaPiyumali/Portfolio.git',
+    github: 'https://github.com/ChathurikaPiyumali/portfolio.git',
     description: 'The Portfolio Website is a personal website designed to showcase my skills, projects, education, and contact information. The website was developed using React for dynamic content, Tailwind CSS for modern and responsive styling, and Framer Motion for smooth animations. It was deployed on Vercel for fast and reliable hosting. The website serves as a comprehensive online representation of my expertise and achievements. It also provides easy navigation to learn more about me and my work and connect with me.',
   },
 
@@ -121,14 +121,17 @@ export const projects: ProjectProps[] = [
     github: 'https://github.com/ChathurikaPiyumali/Employee-Management-System.git',
     description: ' It includes features like employee profiles, attendance, and admin control panels. This project strengthened my backend logic development, JDBC integration, and relational database skills.',
   },
-  {
-    id: 'project7',
-    title: 'Suwasetha Online Medical Portal',
-    category: 'Web Development',
-    image: '/medical.jpeg',
-    technologies: ['PHP', 'SQL Server', 'HTML', 'CSS', 'JavaScript'],
-    description: 'This is a front-end-driven healthcare portal. It allows patients to book appointments and view doctor profiles. This project helped me improve UI layout design, SQL query writing, and form validation techniques.A medical portal for patient management and appointment scheduling.',
+
+      {
+    id: 'project10',
+    title: 'HealthMate AI-Your Personal AI Wellbeing Assistant',
+    category: 'App Development',
+    image: '/HealthMate.png',
+    technologies: ['Kotlin', 'Android Studio', 'XML'],
+    figma: 'https://www.figma.com/proto/jBPsCetkW1W6qUByexnN0q/HealthMate---PixelPaws?node-id=0-1&t=5OB4w0PMvqYUlJug-1',
+    description: 'Health Mate is a comprehensive well-being app designed to address the mental, physical, and academic challenges undergraduate students face.By integrating AI-driven support and personalized features like goal setting, meditation, and emergency assistance, the app provides a seamless and accessible solution for improving student wellbeing.',
   },
+
   {
     id: 'project8',
     title: 'Task Manager System',
@@ -140,14 +143,25 @@ export const projects: ProjectProps[] = [
   },
     {
     id: 'project9',
-    title: 'Urban Mobility AI Solution',
+    title: 'Urban Mobility AI Solution in Sri Lanka',
     category: 'App Development',
-    image: 'https://images.pexels.com/photos/5483071/pexels-photo-5483071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: '/EcoPilot.png',
     technologies: ['Figma', 'AI', 'UI/UX'],
+    figma:'https://www.figma.com/design/Zg5kAsAdBrpk2LOpJSNwQL/Devfest?node-id=0-1&t=5efmzW8E99vGCii1-1',
     description: 'Awarded Merit at Designthon – Codefest 2024 Organized by SLIIT university, this app prototype (designed in Figma) aimed to optimize traffic and transport solutions in Sri Lanka using AI-based route recommendations. While it was a UI/UX and conceptual project, I collaborated with cross-functional teams and presented it to a jury, refining my design thinking and prototyping skills.',
   },
+
   {
-    id: 'project10',
+    id: 'project7',
+    title: 'Suwasetha Online Medical Portal',
+    category: 'Web Development',
+    image: '/medical.jpeg',
+    technologies: ['PHP', 'SQL Server', 'HTML', 'CSS', 'JavaScript'],
+    description: 'This is a front-end-driven healthcare portal. It allows patients to book appointments and view doctor profiles. This project helped me improve UI layout design, SQL query writing, and form validation techniques.A medical portal for patient management and appointment scheduling.',
+  },
+  
+  {
+    id: 'project11',
     title: 'Multi-Feature Productivity Mobile App',
     category: 'App Development',
     image: 'https://images.pexels.com/photos/6393013/pexels-photo-6393013.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -155,6 +169,8 @@ export const projects: ProjectProps[] = [
     description: 'Developed a mobile application using Kotlin and XML in Android Studio that includes to-do lists, reminders, and time tracking. I explored Android app lifecycle, data persistence, and modern UI components. This project gave me my first exposure to mobile development.',
   },
 ];
+
+
 
 
 
