@@ -26,6 +26,7 @@ export interface CertificateProps {
   issuer: string;
   date: string;
   image: string;
+  url?: string;
 }
 
 export interface ServiceProps {

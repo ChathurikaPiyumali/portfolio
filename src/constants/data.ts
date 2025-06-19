@@ -176,20 +176,25 @@ export const projects: ProjectProps[] = [
 
 
 export const certificates: CertificateProps[] = [
-    {
-    id: 'cert1',
-    title: 'AI/ML Engineer - Stage 1',
-    issuer: 'SLIIT Uni',
-    date: 'November 2024',
-    image: '/certificatess/AIML1.png'
-  },
 
-      {
-    id: 'cert2',
+        {
+    id: 'cert1',
     title: 'AI/ML Engineer - Stage 2',
     issuer: 'SLIIT Uni',
     date: 'December 2024',
+    url:'https://code.sliit.org/certificates/phelajy7mo',
     image: '/certificatess/AIML2.png'
+  },
+
+
+    {
+    id: 'cert2',
+    title: 'AI/ML Engineer - Stage 1',
+    issuer: 'SLIIT Uni',
+    date: 'November 2024',
+    url:'https://code.sliit.org/certificates/0qi1ftwvbo',
+    image: '/certificatess/AIML1.png'
+
   },
 
         {
@@ -197,7 +202,9 @@ export const certificates: CertificateProps[] = [
     title: 'Getting Started with Git and GitHub',
     issuer: 'IBM / Coursera',
     date: 'March 2025',
+    url:'https://www.coursera.org/account/accomplishments/verify/O7H4GKN2R2BU',
     image: 'certificatess/IBM_Git.png'
+    
   },
 
         {
@@ -205,6 +212,7 @@ export const certificates: CertificateProps[] = [
     title: 'Machine Learning Introduction for Everyone',
     issuer: 'IBM / Coursera',
     date: 'December 2024',
+    url:'https://www.coursera.org/account/accomplishments/verify/6Q2B3NC1VBXG',
     image: 'certificatess/IBM_ML.png'
   },
 
@@ -214,6 +222,7 @@ export const certificates: CertificateProps[] = [
     title: 'Python for Data Science.AI & Development',
     issuer: 'IBM / Coursera',
     date: 'March 2025',
+    url:'https://www.coursera.org/account/accomplishments/verify/PJ8KLTG1NGSA',
     image: 'certificatess/IBM_Python.png'
   },
 
@@ -222,6 +231,7 @@ export const certificates: CertificateProps[] = [
     title: 'Learning Data Science:Understanding the Basics',
     issuer: 'LinkedIn Learning',
     date: 'December 2024',
+    url:'https://www.linkedin.com/in/chathurika-unagalle-10a937284/details/certifications/1734889409401/single-media-viewer/?profileId=ACoAAEUxjtoBOs4bWI8ABvHOSoNViCDx2AAeMC4',
     image: 'certificatess/Linkedin_DS.png'
   },
 
@@ -230,8 +240,11 @@ export const certificates: CertificateProps[] = [
     title: 'Python for Beginners',
     issuer: 'University of Moratuwa - FOE',
     date: 'March 2025',
+    url:'https://www.linkedin.com/in/chathurika-unagalle-10a937284/details/certifications/1719674448929/single-media-viewer/?profileId=ACoAAEUxjtoBOs4bWI8ABvHOSoNViCDx2AAeMC4',
     image: 'certificatess/UoM_Python.png'
   },
+
+
 
 
  

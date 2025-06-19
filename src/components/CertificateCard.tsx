@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { CertificateProps } from '../types';
 import { FiEye } from 'react-icons/fi';
 
-const CertificateCard: React.FC<CertificateProps> = ({ title, issuer, date, image }) => {
+const CertificateCard: React.FC<CertificateProps> = ({ title, issuer, date, image, url }) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -24,9 +24,15 @@ const CertificateCard: React.FC<CertificateProps> = ({ title, issuer, date, imag
           />
 
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-            <span className="flex items-center justify-center w-10 h-10 bg-gray-900 text-white rounded-full hover:bg-yellow-400 hover:text-black transition-all">
+            <a 
+              href={url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()} // prevent modal open on link click
+              className="flex items-center justify-center w-10 h-10 bg-gray-900 text-white rounded-full hover:bg-yellow-400 hover:text-black transition-all"
+            >
               <FiEye size={18} />
-            </span>
+            </a>
           </div>
         </div>
 
@@ -38,7 +44,10 @@ const CertificateCard: React.FC<CertificateProps> = ({ title, issuer, date, imag
       </motion.div>
       
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background-dark bg-opacity-80" onClick={() => setShowModal(false)}>
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-background-dark bg-opacity-80"
+          onClick={() => setShowModal(false)}
+        >
           <motion.div 
             className="bg-background-light rounded-lg overflow-hidden max-w-3xl w-full"
             initial={{ opacity: 0, scale: 0.9 }}

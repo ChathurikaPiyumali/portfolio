@@ -9,7 +9,7 @@ const TabContent: React.FC<TabContentProps> = ({ children }) => {
 
   useEffect(() => {
     const elements = contentRef.current?.querySelectorAll('.animate-on-scroll');
-    
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -18,11 +18,11 @@ const TabContent: React.FC<TabContentProps> = ({ children }) => {
         }
       });
     }, { threshold: 0.1 });
-    
+
     elements?.forEach(el => {
       observer.observe(el);
     });
-    
+
     return () => {
       elements?.forEach(el => {
         observer.unobserve(el);
@@ -31,7 +31,7 @@ const TabContent: React.FC<TabContentProps> = ({ children }) => {
   }, []);
 
   return (
-    <div ref={contentRef} className="w-full">
+    <div ref={contentRef} className="w-full min-h-screen"> {/* ← Ensure height on mobile */}
       {children}
     </div>
   );

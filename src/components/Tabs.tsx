@@ -28,13 +28,14 @@ const Tabs: React.FC<TabsProps> = ({ tabs, children }) => {
           </button>
         ))}
       </div>
-      
+
       <div className="relative overflow-hidden">
         {React.Children.map(children, (child, index) => {
           const isActive = tabs[index].id === activeTab;
-          
+
           return (
             <motion.div
+              key={tabs[index].id}
               initial={{ opacity: 0, x: 20 }}
               animate={{
                 opacity: isActive ? 1 : 0,
