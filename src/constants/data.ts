@@ -75,9 +75,9 @@ export const projects: ProjectProps[] = [
     title: 'Portfolio Website',
     category: 'Web Development',
     image: '/portfolio.png',
-    technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Framer Motion' , '.....'],
+    technologies: ['TypeScript', 'React', 'Tailwind CSS', 'Framer Motion' ],
     github: 'https://github.com/ChathurikaPiyumali/portfolio.git',
-    description: 'The Portfolio Website is a personal website designed to showcase my skills, projects, education, and contact information. The website was developed using React for dynamic content, Tailwind CSS for modern and responsive styling, and Framer Motion for smooth animations. It was deployed on Vercel for fast and reliable hosting. The website serves as a comprehensive online representation of my expertise and achievements. It also provides easy navigation to learn more about me and my work and connect with me.',
+    description: 'The Portfolio Website is a personal website designed to showcase my skills, projects, education, and contact information. The website was developed using React for dynamic content, Tailwind CSS for modern and responsive styling, and Framer Motion for smooth animations. It was deployed on Vercel for fast and reliable hosting.',
   },
 
     {
@@ -177,28 +177,10 @@ export const projects: ProjectProps[] = [
 
 export const certificates: CertificateProps[] = [
 
+
+
         {
     id: 'cert1',
-    title: 'AI/ML Engineer - Stage 2',
-    issuer: 'SLIIT Uni',
-    date: 'December 2024',
-    url:'https://code.sliit.org/certificates/phelajy7mo',
-    image: '/certificatess/AIML2.png'
-  },
-
-
-    {
-    id: 'cert2',
-    title: 'AI/ML Engineer - Stage 1',
-    issuer: 'SLIIT Uni',
-    date: 'November 2024',
-    url:'https://code.sliit.org/certificates/0qi1ftwvbo',
-    image: '/certificatess/AIML1.png'
-
-  },
-
-        {
-    id: 'cert3',
     title: 'Getting Started with Git and GitHub',
     issuer: 'IBM / Coursera',
     date: 'March 2025',
@@ -208,7 +190,7 @@ export const certificates: CertificateProps[] = [
   },
 
         {
-    id: 'cert4',
+    id: 'cert2',
     title: 'Machine Learning Introduction for Everyone',
     issuer: 'IBM / Coursera',
     date: 'December 2024',
@@ -216,6 +198,25 @@ export const certificates: CertificateProps[] = [
     image: 'certificatess/IBM_ML.png'
   },
 
+          {
+    id: 'cert3',
+    title: 'AI/ML Engineer - Stage 2',
+    issuer: 'SLIIT Uni',
+    date: 'December 2024',
+    url:'https://code.sliit.org/certificates/phelajy7mo',
+    image: '/certificatess/AIML2.png'
+  },
+
+
+    {
+    id: 'cert4',
+    title: 'AI/ML Engineer - Stage 1',
+    issuer: 'SLIIT Uni',
+    date: 'November 2024',
+    url:'https://code.sliit.org/certificates/0qi1ftwvbo',
+    image: '/certificatess/AIML1.png'
+
+  },
 
         {
     id: 'cert5',

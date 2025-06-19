@@ -53,154 +53,96 @@ const Resume: React.FC = () => {
     'Leadership', 'Flexibility', 'Self Confidence'
   ];
 
-  const extracurriculars = [
-    {
-      role: 'Organizing Committee Vice President – Delegates',
-      org: 'Corporate Connect 2025, AIESEC in SLIIT',
-      description: 'Led the Delegate team, facilitated corporate partnerships and participant engagement.'
-    },
-    {
-      role: 'Team Leader',
-      org: 'AIESEC in SLIIT',
-    },
-    {
-      role: 'Member',
-      org: 'Data Science Student Community – SLIIT FOC',
-    },
-    {
-      role: 'Member',
-      org: 'SEDS SLIIT',
-    },
-    {
-      role: 'Junior Prefect',
-      org: 'Anula Vidyalaya',
-    },
-  ];
-
   return (
     <TabContent>
-       <div className="px-4 md:px-8">
-      {/* Education */}
-      <motion.div 
-        className="mb-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <h2 className="text-2xl font-bold mb-6">Education</h2>
-        <div className="space-y-6">
-          {education.map((edu, index) => (
-            <motion.div 
-              key={index} 
-              variants={itemVariants} 
-              className="relative pl-6 border-l-2 border-gray-700"
-            >
-              <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-gold"></div>
-              <div className="bg-background-light p-6 rounded-lg">
-                <span className="text-accent-gold text-sm font-medium">{edu.period}</span>
-                <h3 className="text-lg font-semibold mt-1 mb-1">{edu.degree}</h3>
-                <p className="text-text-secondary">{edu.institution}</p>
-                {edu.description && (
-                  <p className="text-text-secondary text-sm mt-2">{edu.description}</p>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+      <div className="px-4 md:px-8">
+        {/* Education */}
+        <motion.div 
+          className="mb-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
+          <h2 className="text-2xl font-bold mb-6">Education</h2>
+          <div className="space-y-6">
+            {education.map((edu, index) => (
+              <motion.div 
+                key={index} 
+                variants={itemVariants} 
+                className="relative pl-6 border-l-2 border-gray-700"
+              >
+                <div className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accent-gold"></div>
+                <div className="bg-background-light p-6 rounded-lg">
+                  <span className="text-accent-gold text-sm font-medium">{edu.period}</span>
+                  <h3 className="text-lg font-semibold mt-1 mb-1">{edu.degree}</h3>
+                  <p className="text-text-secondary">{edu.institution}</p>
+                  {edu.description && (
+                    <p className="text-text-secondary text-sm mt-2">{edu.description}</p>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-      {/* Technical Skills */}
-      <motion.div 
-        className="mb-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <h2 className="text-2xl font-bold mb-6">Technical Skills</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
-          {skills.map((skill, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <ProgressBar name={skill.name} percentage={skill.percentage} />
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+        {/* Technical Skills */}
+        <motion.div 
+          className="mb-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
+          <h2 className="text-2xl font-bold mb-6">Technical Skills</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+            {skills.map((skill, index) => (
+              <motion.div key={index} variants={itemVariants}>
+                <ProgressBar name={skill.name} percentage={skill.percentage} />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
 
-      {/* Soft Skills */}
-      <motion.div 
-        className="mb-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <h2 className="text-2xl font-bold mb-6">Soft Skills</h2>
-        <div className="flex flex-wrap gap-3">
-          {softSkills.map((skill, index) => (
-            <motion.span
-              key={index}
-              variants={itemVariants}
-              className="bg-background-light px-4 py-2 rounded-full text-sm border border-gray-700 hover:border-accent-gold transition-colors duration-300"
-            >
-              {skill}
-            </motion.span>
-          ))}
-        </div>
-      </motion.div>
+        {/* Soft Skills */}
+        <motion.div 
+          className="mb-10"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
+          <h2 className="text-2xl font-bold mb-6">Soft Skills</h2>
+          <div className="flex flex-wrap gap-3">
+            {softSkills.map((skill, index) => (
+              <motion.span
+                key={index}
+                variants={itemVariants}
+                className="bg-background-light px-4 py-2 rounded-full text-sm border border-gray-700 hover:border-accent-gold transition-colors duration-300"
+              >
+                {skill}
+              </motion.span>
+            ))}
+          </div>
+        </motion.div>
 
-      {/* Extracurricular Activities */}
-      <motion.div 
-        className="mb-10"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <h2 className="text-2xl font-bold mb-6">Extracurricular Activities</h2>
-        <div className="space-y-4">
-          {extracurriculars.map((activity, index) => (
-            <motion.div
-              key={index}
-              variants={itemVariants}
-              className="bg-background-light p-4 rounded-lg border border-gray-700"
-            >
-              <h4 className="font-semibold">{activity.role}</h4>
-              <p className="text-text-secondary">{activity.org}</p>
-              {activity.description && (
-                <p className="text-sm text-text-secondary mt-1">{activity.description}</p>
-              )}
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-
-      {/* Languages */}
-      <motion.div
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={containerVariants}
-      >
-        <h2 className="text-2xl font-bold mb-4">Languages</h2>
-        <div className="grid grid-cols-1 gap-y-4">
-          <motion.div
+        {/* Download Resume Button */}
+        <motion.div 
+          className="text-center mt-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={containerVariants}
+        >
+          <motion.a
+            href="/chathurika_unagalle.pdf"
+            download
             variants={itemVariants}
-            className="flex justify-between items-center bg-background-light rounded-lg p-4"
+            className="inline-block px-6 py-3 bg-accent-gold text-black font-semibold rounded-full shadow hover:bg-yellow-400 transition-colors duration-300"
           >
-            <span className="font-medium">Sinhala</span>
-            <span className="text-accent-gold">Native</span>
-          </motion.div>
-          <motion.div
-            variants={itemVariants}
-            className="flex justify-between items-center bg-background-light rounded-lg p-4"
-          >
-            <span className="font-medium">English</span>
-            <span className="text-accent-gold">Professional</span>
-          </motion.div>
-        </div>
-      </motion.div>
+            Download Resume
+          </motion.a>
+        </motion.div>
       </div>
     </TabContent>
   );
