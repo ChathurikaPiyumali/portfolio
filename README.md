@@ -19,18 +19,7 @@ Welcome to my personal portfolio website, built to showcase my work, skills, cer
 
 ---
 
-## 📁 Project Structure
-
-```bash
-.
-├── public/
-│   ├── certificatess/
-│   └── assets/
-├── src/
-│   ├── components/
-│   ├── constants/
-│   ├── sections/
-│   ├── types/
-│   ├── App.tsx
-│   └── index.tsx
-└── README.md
+![about](portfolio.png)
+![projects](portfolio3.png)
+![certificates](portfolio4.png)
+![resume](portfolio2.png)
