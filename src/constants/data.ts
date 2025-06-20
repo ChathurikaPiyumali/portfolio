@@ -20,21 +20,20 @@ export const services: ServiceProps[] = [
     icon: undefined
   },
 
-  {
-    title: 'Statistical Analysis',
-    description: 'Applying statistical methods to extract meaningful patterns and predictions from data.',
-    icon: undefined
-  },
-    {
+      {
     title: 'Data Management',
     description: 'Expertise in data management, including ETL processes and data warehousing.',
     icon: undefined
   },
-    {
+
+      {
     title: 'MERN Stack Applications',
     description: 'Developing full-stack applications using MongoDB, Express, React, and Node.js.',
     icon: undefined
   },
+
+
+
 
 
 
@@ -87,7 +86,7 @@ export const projects: ProjectProps[] = [
     image: '/DW.jpeg',
     technologies: ['SSMS', 'SSAS', 'SSRS', 'Power BI', 'Excel'],
     github:'https://github.com/ChathurikaPiyumali/SalesAnalytics-DW-BI.git',
-    description: 'This project demonstrates a complete end-to-end Business Intelligence (BI) workflow using a Snowflake Schema for a retail sales scenario. It includes: ⚙️ Data Warehouse design and implementation (via SSMS) 📊 OLAP Cube creation (via Visual Studio/SSAS) 📝 SSRS Reports 📈 Power BI dashboards 📁 Excel-based OLAP operations.',
+    description: 'This project demonstrates a complete end-to-end Business Intelligence (BI) workflow using a Snowflake Schema for a retail sales scenario. It includes: Data Warehouse design and implementation (via SSMS)  OLAP Cube creation (via Visual Studio/SSAS)  SSRS Reports  Power BI dashboards  Excel-based OLAP operations.',
   },
 
   {
@@ -97,7 +96,7 @@ export const projects: ProjectProps[] = [
     image: '/gardening_.jpg',
     technologies: ['Spring Boot', 'React', 'MongoDB', 'Postman'],
     github: 'https://github.com/weharaSliit/-Gardening-Sustainable-Agriculture-.git',
-    description: 'GrowSphere is a Spring-based web application designed to promote eco-friendly gardening and sustainable agriculture practices. The platform helps users plan, manage, and optimize gardens while fostering community engagement. Key features include User Profiles & Garden Logs, Gardening Tutorials, Community Discussions, and Growth Challenges with a leaderboard system to motivate participation. As the contributor for the Gardening Tutorial module, I implemented tutorial creation with media handling, progress tracking, and certificate generating.',
+    description: 'GrowSphere is a Spring-based web application designed to promote eco-friendly gardening and sustainable agriculture practices. Key features include User Profiles & Garden Logs, Gardening Tutorials, Community Discussions, and Growth Challenges . As the contributor for the Gardening Tutorial module, I implemented tutorial creation with media handling, progress tracking, and certificate generating.',
   },
 
     {
@@ -111,6 +110,7 @@ export const projects: ProjectProps[] = [
   },
 
 
+  
 
   {
     id: 'project6',
@@ -122,15 +122,7 @@ export const projects: ProjectProps[] = [
     description: ' It includes features like employee profiles, attendance, and admin control panels. This project strengthened my backend logic development, JDBC integration, and relational database skills.',
   },
 
-      {
-    id: 'project10',
-    title: 'HealthMate AI-Your Personal AI Wellbeing Assistant',
-    category: 'App Development',
-    image: '/HealthMate.png',
-    technologies: ['Kotlin', 'Android Studio', 'XML'],
-    figma: 'https://www.figma.com/proto/jBPsCetkW1W6qUByexnN0q/HealthMate---PixelPaws?node-id=0-1&t=5OB4w0PMvqYUlJug-1',
-    description: 'Health Mate is a comprehensive well-being app designed to address the mental, physical, and academic challenges undergraduate students face.By integrating AI-driven support and personalized features like goal setting, meditation, and emergency assistance, the app provides a seamless and accessible solution for improving student wellbeing.',
-  },
+
 
   {
     id: 'project8',

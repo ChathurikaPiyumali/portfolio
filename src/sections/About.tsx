@@ -1,10 +1,8 @@
-// src/sections/About.tsx
-
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
+import CountUp from 'react-countup';
 import { BarChart2, Database, Code, LineChart } from 'lucide-react';
 import TabContent from '../components/TabContent';
-import InfoBox from '../components/InfoBox';
 import ServiceCard from '../components/ServiceCard';
 import { services } from '../constants/data';
 
@@ -15,7 +13,6 @@ import {
   SiC, SiCplusplus, SiSnowflake, SiApachespark, SiPowers
 } from 'react-icons/si';
 import { DiJava } from 'react-icons/di';
-import type { IconType } from 'react-icons';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -28,11 +25,6 @@ const containerVariants: Variants = {
 const blockVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 80, damping: 14 } }
-};
-
-const iconVariants: Variants = {
-  hidden: { opacity: 0, scale: 0.8 },
-  show: { opacity: 1, scale: 1, transition: { type: 'spring', stiffness: 120, damping: 12 } }
 };
 
 const About: React.FC = () => {
@@ -97,17 +89,48 @@ const About: React.FC = () => {
         viewport={{ once: true, amount: 0.1 }}
         variants={containerVariants}
       >
+        {/* About Me */}
         <motion.div variants={blockVariants} className="mb-8">
           <h2 className="text-2xl font-bold mb-4">About Me</h2>
           <p className="text-text-secondary mb-6 leading-relaxed">
             Hello! I am an aspiring Data Scientist with a strong passion for uncovering insights and solving complex problems through data. Currently pursuing a Bachelor's degree in Information Technology with a specialization in Data Science at SLIIT, I have developed a solid foundation in data analysis, machine learning, and statistical modeling. My journey so far includes hands-on experience with tools like Python and R. I am enthusiastic about leveraging data science to make a meaningful impact on businesses and society, and I continuously seek opportunities to grow and challenge myself in this ever-evolving field.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-            <InfoBox number="2+" text="Years Academic/Project Experience" />
-            <InfoBox number="10+" text="Projects Completed in Data Science & Full Stack Dev" />
+
+          {/* Stat Boxes */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+            <div className="h-[110px] w-full bg-background-dark border border-accent-gold rounded-lg p-4 flex items-center justify-center transition-all duration-300 hover:border-yellow-400">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex flex-col items-center justify-center"
+                style={{ willChange: 'transform' }}
+              >
+                <h3 className="text-3xl font-bold text-accent-gold mb-1">
+                  <CountUp end={2} duration={2} />+
+                </h3>
+                <p className="text-sm text-text-secondary text-center">
+                  Years Academic/Project Experience
+                </p>
+              </motion.div>
+            </div>
+
+            <div className="h-[110px] w-full bg-background-dark border border-gray-600 rounded-lg p-4 flex items-center justify-center transition-all duration-300 hover:border-yellow-400">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="flex flex-col items-center justify-center"
+                style={{ willChange: 'transform' }}
+              >
+                <h3 className="text-3xl font-bold text-accent-gold mb-1">
+                  <CountUp end={10} duration={2} />+
+                </h3>
+                <p className="text-sm text-text-secondary text-center">
+                  Projects Completed in Data Science & Full Stack Dev
+                </p>
+              </motion.div>
+            </div>
           </div>
         </motion.div>
 
+        {/* What I'm Doing */}
         <motion.div variants={blockVariants} className="mb-12">
           <h2 className="text-2xl font-bold mb-6">What I'm Doing</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -122,29 +145,53 @@ const About: React.FC = () => {
           </div>
         </motion.div>
 
+        {/* My Tech Universe */}
         <motion.div variants={blockVariants} className="mb-12">
           <h2 className="text-2xl font-bold mb-6">My Tech Universe</h2>
+
           {techCategories.map(({ title, items }) => (
             <div key={title} className="mb-8">
               <h3 className="text-xl font-semibold mb-4 inline-block border-b-2 border-accent-gold">
                 {title}
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+
+              <motion.div
+                className="grid grid-cols-2 md:grid-cols-4 gap-6"
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={{
+                  hidden: {},
+                  show: {
+                    transition: {
+                      staggerChildren: 0.1
+                    }
+                  }
+                }}
+              >
                 {items.map(({ name, Icon, color }) => (
                   <motion.div
                     key={name}
-                    variants={iconVariants}
-                    className="bg-transparent border border-gray-700 rounded-lg p-4 flex flex-col items-center"
+                    variants={{
+                      hidden: { opacity: 0, y: 20, scale: 0.9 },
+                      show: { opacity: 1, y: 0, scale: 1, transition: { type: 'spring', stiffness: 100, damping: 15 } }
+                    }}
+                    className="h-[110px] w-full bg-transparent border border-gray-700 rounded-lg p-4 flex items-center justify-center transition-all duration-300 hover:border-accent-gold"
                   >
-                    <Icon size={32} style={{ color }} className="mb-2" />
-                    <span className="text-sm text-white">{name}</span>
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      className="flex flex-col items-center justify-center"
+                      style={{ willChange: 'transform' }}
+                    >
+                      <Icon size={32} style={{ color }} className="mb-2" />
+                      <span className="text-sm text-white text-center">{name}</span>
+                    </motion.div>
                   </motion.div>
                 ))}
-              </div>
+              </motion.div>
             </div>
           ))}
         </motion.div>
-
       </motion.div>
     </TabContent>
   );
