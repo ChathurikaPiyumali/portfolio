@@ -3,72 +3,79 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background-dark text-text-primary font-sans;
+    @apply bg-background-dark text-text-primary font-sans antialiased selection:bg-accent-gold/20 selection:text-accent-gold;
+    overflow-x: hidden;
   }
 }
 
 @layer components {
   .tab-button {
-    @apply py-3 px-4 text-text-secondary font-medium relative transition-all duration-300 hover:text-text-accent;
+    @apply py-3 px-4 text-text-secondary font-medium relative transition-all duration-300 hover:text-white rounded-xl flex items-center gap-2;
   }
   
   .tab-button.active {
-    @apply text-accent-gold;
+    @apply text-accent-gold bg-accent-gold/10 font-semibold;
   }
   
   .tab-button.active::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-full h-0.5 bg-accent-gold;
+    @apply absolute bottom-0 left-3 right-3 h-0.5 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-full;
+  }
+
+  .card-glass {
+    @apply bg-background-light/70 backdrop-blur-xl border border-white/10 rounded-2xl shadow-glass transition-all duration-300;
+  }
+
+  .card-interactive {
+    @apply card-glass hover:border-accent-gold/40 hover:shadow-glow-gold hover:-translate-y-1 transition-all duration-300;
+  }
+
+  .badge-tech {
+    @apply text-xs font-medium px-2.5 py-1 rounded-md bg-white/5 border border-white/10 text-slate-300 transition-colors duration-200 hover:border-amber-400/40 hover:text-white;
+  }
+
+  .badge-category {
+    @apply text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider bg-accent-gold/10 border border-accent-gold/30 text-accent-gold;
   }
   
   .progress-bar {
-    @apply h-2 rounded-full bg-background-light overflow-hidden;
+    @apply h-2.5 rounded-full bg-slate-800/80 overflow-hidden p-0.5 border border-white/5;
   }
   
   .progress-fill {
-    @apply h-full rounded-full bg-accent-gold transition-all duration-1000;
-  }
-  
-  .card {
-      @apply bg-background-light rounded-3xl overflow-hidden shadow-2xl;
+    @apply h-full rounded-full bg-gradient-to-r from-amber-500 via-yellow-400 to-amber-300 transition-all duration-1000 shadow-sm;
   }
   
   .contact-input {
-    @apply w-full bg-background-light border border-gray-700 rounded-md py-2 px-4 text-text-primary focus:outline-none focus:ring-2 focus:ring-accent-gold;
+    @apply w-full bg-background-card/90 border border-white/10 rounded-xl py-3 px-4 text-text-primary placeholder-slate-500 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold/50 transition-all duration-200;
   }
 }
 
-.section-appear {
-  animation: slideUp 0.6s ease forwards;
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-@keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* For Firefox */
+/* Custom Scrollbars */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #4A5568 #171F38;
+  scrollbar-color: #334155 #0B0F19;
 }
 
-/* For Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 *::-webkit-scrollbar-track {
-  background: #171F38;
+  background: #0B0F19;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #4A5568;
-  border-radius: 20px;
-  border: 2px solid #171F38;
+  background-color: #334155;
+  border-radius: 9999px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #475569;
 }
